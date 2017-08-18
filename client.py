@@ -67,7 +67,7 @@ def post_people():
     ]
 
     r = perform_post('people', json.dumps(people))
-    print "'people' posted", r.status_code
+    print("'people' posted", r.status_code)
 
     valids = []
     if r.status_code == 201:
@@ -92,7 +92,7 @@ def post_works(ids):
         )
 
     r = perform_post('works', json.dumps(works))
-    print "'works' posted", r.status_code
+    print("'works' posted", r.status_code)
 
 
 def perform_post(resource, data):
@@ -102,9 +102,9 @@ def perform_post(resource, data):
 
 def delete():
     r = perform_delete('people')
-    print "'people' deleted", r.status_code
+    print("'people' deleted", r.status_code)
     r = perform_delete('works')
-    print "'works' deleted", r.status_code
+    print("'works' deleted", r.status_code)
 
 
 def perform_delete(resource):
